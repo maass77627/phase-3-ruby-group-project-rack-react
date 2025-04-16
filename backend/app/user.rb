@@ -3,15 +3,15 @@ class User < ActiveRecord::Base
 
 has_many :foods
 
-attr_accessor :firstname, :lastname, :email, :hometown
+# attr_accessor :firstname, :lastname, :email, :hometown
 
-def initialize(firstname, lastname, email, hometown)
-    @firstname = firstname
-    @lastname = lastname
-    @email = email
-    @hometown = hometown
+# def initialize(firstname, lastname, email, hometown)
+#     @firstname = firstname
+#     @lastname = lastname
+#     @email = email
+#     @hometown = hometown
 
-end
+# end
 
 def self.create_table
     sql = <<-SQL
