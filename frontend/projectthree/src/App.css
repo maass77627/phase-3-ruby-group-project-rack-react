@@ -1,7 +1,39 @@
 .App {
   text-align: center;
-  background-color: rgb(145, 85, 95);
+  background-color: rgb(167, 158, 159);
 }
 
+#header {
+  height: 200px;
+  
+  background-color: cadetblue;
+}
 
+#fcontainer {
+  position: absolute;
+  top: 300px;
+  height: 1000px;
+  width: 1000px;
+  background-color: rgb(42, 66, 6);
+}
 
+#food {
+  float: right;
+  height: 200px;
+  width: 200px;
+  /* background-color: rgb(62, 62, 95); */
+}
+
+#foodimg {
+  height: 50px;
+  width: 50px;
+}
+
+#intake{
+  position: absolute;
+  top: 300px;
+  right: 100px;
+  height: 500px;
+  width: 800px;
+  background-color: chartreuse;
+}
