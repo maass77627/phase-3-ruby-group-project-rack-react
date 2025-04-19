@@ -3,6 +3,7 @@ import './App.css';
 import { useState } from 'react';
 import FoodContainer from "./FoodContainer";
 import DailyIntake from "./DailyIntake";
+import Nav from "./Nav";
 
 function App() {
 
@@ -22,6 +23,7 @@ useEffect(()=> {
 
   return (
     <div className="App">
+      <Nav></Nav>
      <FoodContainer setDailyfood={setDailyfood} dailyfood={dailyfood} foods={foods}></FoodContainer>
      <DailyIntake></DailyIntake>
     </div>
