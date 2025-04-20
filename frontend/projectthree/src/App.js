@@ -8,7 +8,7 @@ import Nav from "./Nav";
 function App() {
 
   const [foods, setFoods] = useState([])
-  const [dailyfood, setDailyfood] = useState()
+  const [dailyfood, setDailyfood] = useState([])
 
 useEffect(()=> {
   fetch("http://localhost:9292/foods")
@@ -25,7 +25,7 @@ useEffect(()=> {
     <div className="App">
       <Nav></Nav>
      <FoodContainer setDailyfood={setDailyfood} dailyfood={dailyfood} foods={foods}></FoodContainer>
-     <DailyIntake></DailyIntake>
+     <DailyIntake dailyfood={dailyfood}></DailyIntake>
     </div>
   );
 }

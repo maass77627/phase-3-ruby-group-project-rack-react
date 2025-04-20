@@ -18,10 +18,10 @@ function handleClick() {
 
     return(
         <div onClick={handleClick} id="food">
-            <h3>{food.name}</h3>
-            <h4>{food.category}</h4>
+            <h3>{food.name.toUpperCase()}</h3>
+            {/* <h4>{food.category}</h4> */}
             <img id="foodimg" src={food.image} alt="banana"/>
-            <p>{food.description}</p>
+            {/* <p>{food.description}</p> */}
             <p>{food.calories}</p>
             
         </div>
