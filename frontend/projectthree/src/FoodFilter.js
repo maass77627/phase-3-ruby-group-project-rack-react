@@ -3,6 +3,10 @@ import React from "react";
 function FoodFilter() {
 
 
+    function handleChange(e) {
+        console.log(e.target)
+    }
+
     function handleSubmit(e) {
         e.preventDefault()
         console.log(e)
@@ -12,7 +16,7 @@ function FoodFilter() {
 
     return(
         <form onSubmit={handleSubmit} id="form">
-            <input type="text" value="food"></input>
+            <input onChange={handleChange} type="text" value="food"></input>
             <input type="submit" value="submit" id="submit"></input>
         </form>
     )
