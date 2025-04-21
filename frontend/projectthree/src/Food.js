@@ -9,9 +9,13 @@ function Food({food, setDailyfood, dailyfood}) {
 console.log(food)
 
 function handleClick() {
-    console.log(food)
+    console.log(dailyfood.length)
+    if (dailyfood.length < 8) {
     setDailyfood([...dailyfood, food])
-    console.log(dailyfood)
+     } else{
+       console.log(dailyfood)
+     }
+    
 }
 
 

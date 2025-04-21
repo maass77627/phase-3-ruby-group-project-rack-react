@@ -2,14 +2,14 @@ import React from "react";
 import Food from "./Food";
 import FoodFilter from "./FoodFilter";
 
-function FoodContainer({ foods, setDailyfood, dailyfood }) {
+function FoodContainer({ foods, setDailyfood, dailyfood, setFoods }) {
         console.log(foods)
 
 
 
     return(
         <div id="fcontainer">
-            <FoodFilter></FoodFilter>
+            <FoodFilter foods={foods} setFoods={setFoods}></FoodFilter>
             {foods.map((food) => <Food dailyfood={dailyfood} setDailyfood={setDailyfood} food={food}  key={food.id}></Food>)}
 
         </div>

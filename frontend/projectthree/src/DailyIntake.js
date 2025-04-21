@@ -1,5 +1,5 @@
 import React from "react";
-import Food from "./Food";
+import FoodTwo from "./FoodTwo";
 
 function DailyIntake({ dailyfood }) {
     console.log(dailyfood)
@@ -7,7 +7,7 @@ function DailyIntake({ dailyfood }) {
 return(
     <div id="intake">
         <h1>Daily Food</h1>
-        {dailyfood ? dailyfood.map((food) => <Food food={food}></Food>) : null}
+        {dailyfood ? dailyfood.map((food) => <FoodTwo food={food}></FoodTwo>) : null}
 
     </div>
 )

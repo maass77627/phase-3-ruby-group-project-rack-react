@@ -44,7 +44,23 @@
 }
 
 #data{
+  position: absolute;
+  left: 200px;
   height: 700px;
-  width: 600px;
+  width: 1400px;
   background-color: coral;
+}
+
+#form{
+  position: absolute;
+  top: 400px;
+  left: 400px;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.nothidden {
+  visibility: visible;
 }
