@@ -1,3 +1,5 @@
+require 'pry'
+
 class Application
 
   def call(env)
@@ -10,11 +12,16 @@ class Application
     # else
     #   resp.write "Path Not Found"
 
-    if req.path.match(/foods/) 
+    if req.path.match(/foods/) && req.get?
       # return [200, { 'Content-Type' => 'application/json' }, [ {:message => "test response!"}.to_json ]]
       resp.write Food.all.to_json
-    else
-      resp.write "Path Not Found"
+
+    elsif req.path.match(/foods/) && req.post?
+       data = JSON.parse req.body.read
+     
+     food = Food.create(name: data.name, description: data.description, category: data.category, calories: data.calories, image: data.image)
+    #  resp.write food.to_json
+       return [200, { 'Content-Type' => 'application/json' }, [ {:food => food}.to_json ]]   
 
     end
 
