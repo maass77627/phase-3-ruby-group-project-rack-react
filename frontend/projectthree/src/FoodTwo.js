@@ -9,6 +9,7 @@ function FoodTwo({food}) {
 console.log(food)
 
 function handleDelete(e) {
+    console.log("delete")
     console.log(e.target)
 }
 
