@@ -20,10 +20,12 @@ class Application
        data = JSON.parse req.body.read
      
      food = Food.create(name: data.name, description: data.description, category: data.category, calories: data.calories, image: data.image)
-    #  resp.write food.to_json
-       return [200, { 'Content-Type' => 'application/json' }, [ {:food => food}.to_json ]]   
+      resp.write food.to_json
+      binding.pry
+      #  return [200, { 'Content-Type' => 'application/json' }, [ {:food => food}.to_json ]]   
 
     end
+  
 
     resp.finish
   end
