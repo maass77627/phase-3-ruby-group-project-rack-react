@@ -50,8 +50,10 @@ function NewForm() {
 
         function handleSubmit(e) {
             e.preventDefault()
+            console.log(formData)
             fetch("http://localhost:9292/foods", {
                 method: "POST",
+                mode: 'no-cors',
                 headers: {
                     "Content-Type": "application/json"
                   }, 
@@ -59,12 +61,9 @@ function NewForm() {
             })
             .then((response) => response.json())
             .then((json) => {
-                // let updatedrecords = [...records, json]
-                // setRecords(updatedrecords)
+               
              console.log(json)})
-
-
-        }
+            }
 
     return(
         <div id="newform">
