@@ -6,11 +6,7 @@ class Application
     resp = Rack::Response.new
     req = Rack::Request.new(env)
 
-    # if req.path.match(/test/) 
-    #   return [200, { 'Content-Type' => 'application/json' }, [ {:message => "test response!"}.to_json ]]
-
-    # else
-    #   resp.write "Path Not Found"
+    
 
     if req.path.match(/foods/) && req.get?
       # return [200, { 'Content-Type' => 'application/json' }, [ {:message => "test response!"}.to_json ]]
@@ -18,10 +14,11 @@ class Application
 
     elsif req.path.match(/foods/) && req.post?
        data = JSON.parse req.body.read
-     
-     food = Food.create(name: data.name, description: data.description, category: data.category, calories: data.calories, image: data.image)
-      resp.write food.to_json
-      binding.pry
+      #  binding.pry
+      food = Food.create(name: data["name"], description: data["description"], category: data["category"], calories: data["calories"], image: data["image"])
+    #  binding.pry
+       resp.write food.to_json
+    #  binding.pry
       #  return [200, { 'Content-Type' => 'application/json' }, [ {:food => food}.to_json ]]   
 
     end

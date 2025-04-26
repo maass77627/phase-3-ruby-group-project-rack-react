@@ -3,14 +3,16 @@ class Food < ActiveRecord::Base
 
 belongs_to :user
 
-# attr_accessor :name, :description, :category
+# attr_accessor :name, :description, :category, :calories
 
-# def initialize(name, description, category)
-#     @name = name
-#     @description = description
-#     @category = category
+#  def initialize(name, description, category, calories)
+#      @name = name
+#      @description = description
+#      @category = category
+#      @calories = calories
 
 
-# end
+#  end
+
 
 end
