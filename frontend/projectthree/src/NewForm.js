@@ -53,7 +53,7 @@ function NewForm() {
             console.log(formData)
             fetch("http://localhost:9292/foods", {
                 method: "POST",
-                mode: 'no-cors',
+                // mode: 'no-cors',
                 headers: {
                     "Content-Type": "application/json"
                   }, 
@@ -68,7 +68,7 @@ function NewForm() {
     return(
         <div id="newform">
             <form onSubmit={handleSubmit} id="form">
-            <label id="label">Title</label>
+            <label id="label">Name</label>
                 <input onChange={handleNameChange} type="text" value={formData.name}></input>
                 <label id="label">Description</label>
                 <input onChange={handleDescriptionChange} type="text" value={formData.description}></input>

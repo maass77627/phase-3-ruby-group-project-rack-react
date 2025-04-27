@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 
-function FoodTwo({food}) {
+function FoodTwo({food, setDailyfood, dailyfood}) {
 
    const [toggle, setToggle] = useState(false)
     
@@ -9,8 +9,11 @@ function FoodTwo({food}) {
 console.log(food)
 
 function handleDelete(e) {
-    console.log("delete")
-    console.log(e.target)
+  
+ let newfood = dailyfood.filter((foody) => foody.id !== food.id)
+ setDailyfood(newfood)
+ console.log(newfood)
+    
 }
 
 function handleClick(e) {
@@ -27,7 +30,7 @@ function handleClick(e) {
             <img id="foodimg" src={food.image} alt="banana"/>
             
             <p>{food.calories}</p>
-         { toggle ?  <button onClick={handleDelete} >delete</button> : null}
+         { toggle ?  <button onClick={(e) => handleDelete(e)} >delete</button> : null}
         </div>
     )
 }

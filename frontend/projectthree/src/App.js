@@ -26,7 +26,7 @@ useEffect(()=> {
 const Home = () => (
   <div id="new">
  <FoodContainer setDailyfood={setDailyfood} dailyfood={dailyfood} foods={foods} setFoods={setFoods}></FoodContainer>
-     <DailyIntake dailyfood={dailyfood}></DailyIntake>
+     <DailyIntake setDailyfood={setDailyfood} dailyfood={dailyfood}></DailyIntake>
   </div>
 );
 
