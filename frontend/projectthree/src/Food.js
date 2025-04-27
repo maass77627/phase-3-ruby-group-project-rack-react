@@ -2,9 +2,8 @@
 import React from "react";
 import { useState } from "react";
 
-function Food({food, setDailyfood, dailyfood}) {
+function Food({food, setDailyfood, dailyfood, foods, setFoods}) {
 
-    // const [dailyfood, setDailyfood] = useState()
     const [toggle, setToggle] = useState(false)
 
     console.log(food)
@@ -27,6 +26,8 @@ function Food({food, setDailyfood, dailyfood}) {
         fetch(`http://localhost:9292/foods/${id}`, {
             method: "DELETE"
         })
+        let newfood = foods.filter((foody) => foody.id !== food.id)
+        setFoods(newfood)
     }
 
 

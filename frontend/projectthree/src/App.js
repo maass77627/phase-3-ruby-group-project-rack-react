@@ -4,9 +4,9 @@ import { useState } from 'react';
 import FoodContainer from "./FoodContainer";
 import DailyIntake from "./DailyIntake";
 import Nav from "./Nav";
- import { BrowserRouter, Routes, Route} from 'react-router-dom';
- import Data from "./Data";
- import NewForm from "./NewForm";
+import { BrowserRouter, Routes, Route} from 'react-router-dom';
+import Data from "./Data";
+import NewForm from "./NewForm";
 
 function App() {
 
@@ -25,7 +25,7 @@ useEffect(()=> {
 
 const Home = () => (
   <div id="new">
- <FoodContainer setDailyfood={setDailyfood} dailyfood={dailyfood} foods={foods} setFoods={setFoods}></FoodContainer>
+     <FoodContainer setDailyfood={setDailyfood} dailyfood={dailyfood} foods={foods} setFoods={setFoods}></FoodContainer>
      <DailyIntake setDailyfood={setDailyfood} dailyfood={dailyfood}></DailyIntake>
   </div>
 );
@@ -34,16 +34,9 @@ const Home = () => (
 
   return (
     <div className="App">
-      {/* <Nav></Nav> */}
-      {/* <FoodContainer setDailyfood={setDailyfood} dailyfood={dailyfood} foods={foods}></FoodContainer>
-      <DailyIntake dailyfood={dailyfood}></DailyIntake>  */}
-
-
-
      <BrowserRouter>
        <Nav/>
         <Routes>
-        
         <Route path="/" element={Home()}/>
         <Route path="/new" element={<NewForm />}></Route>
         <Route path="/data" element={<Data />}></Route>

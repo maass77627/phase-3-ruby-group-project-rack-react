@@ -26,9 +26,7 @@ function handleClick(e) {
     return(
         <div onClick={handleClick} id="food">
             <h3>{food.name.toUpperCase()}</h3>
-          
             <img id="foodimg" src={food.image} alt="banana"/>
-            
             <p>{food.calories}</p>
          { toggle ?  <button onClick={(e) => handleDelete(e)} >delete</button> : null}
         </div>

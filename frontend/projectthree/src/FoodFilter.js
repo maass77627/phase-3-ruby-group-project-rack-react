@@ -13,6 +13,7 @@ const [foodinput, setFoodInput] = useState("")
     function handleSubmit(e) {
         e.preventDefault()
         console.log(e)
+        
         let newfoods = foods.filter((food) => food.name === foodinput)
             console.log(newfoods)
             setFoods(newfoods)

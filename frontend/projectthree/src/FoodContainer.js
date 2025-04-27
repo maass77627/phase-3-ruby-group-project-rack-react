@@ -10,7 +10,7 @@ function FoodContainer({ foods, setDailyfood, dailyfood, setFoods }) {
     return(
         <div id="fcontainer">
             <FoodFilter foods={foods} setFoods={setFoods}></FoodFilter>
-            {foods.map((food) => <Food dailyfood={dailyfood} setDailyfood={setDailyfood} food={food}  key={food.id}></Food>)}
+            {foods.map((food) => <Food dailyfood={dailyfood} setDailyfood={setDailyfood} food={food} foods={foods} setFoods={setFoods}  key={food.id}></Food>)}
 
         </div>
     )

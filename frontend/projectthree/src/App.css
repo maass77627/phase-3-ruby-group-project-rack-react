@@ -3,6 +3,11 @@
   background-color: rgb(167, 158, 159);
 }
 
+#links {
+  margin: auto;
+  padding: 30px;
+}
+
 #nav {
   height: 200px;
   width: 2000px;
@@ -49,6 +54,15 @@
   height: 700px;
   width: 1400px;
   background-color: coral;
+}
+
+
+#newform {
+  /* position: fixed; */
+  background-color: blueviolet;
+  left: 100px;
+  height: 300px;
+  width: 2000px;
 }
 
 #form{
