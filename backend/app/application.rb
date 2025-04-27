@@ -7,8 +7,6 @@ class Application
     resp = Rack::Response.new
     req = Rack::Request.new(env)
 
-    
-
     if req.path.match(/foods/) && req.get?
       # return [200, { 'Content-Type' => 'application/json' }, [ {:message => "test response!"}.to_json ]]
       resp.write Food.all.to_json
@@ -20,12 +18,13 @@ class Application
        resp.write(food.to_json)
       #  return [200, { 'Content-Type' => 'application/json' }, [ {:food => food}.to_json ]]   
     elsif req.delete?
-      req.path.split("/foods/").last
+      puts "recieved request"
+     id = req.path.split("/foods/").last
       Food.find(id).delete
     else
       resp.write "Path Not Found"
     end
     resp.finish
-  end
+    end
 
-end
+    end
