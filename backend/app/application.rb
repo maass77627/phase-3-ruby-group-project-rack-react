@@ -1,4 +1,5 @@
 require 'pry'
+require 'json'
 
 class Application
 
@@ -14,16 +15,16 @@ class Application
 
     elsif req.path.match(/foods/) && req.post?
        data = JSON.parse req.body.read
-      #  binding.pry
       food = Food.create(name: data["name"], description: data["description"], category: data["category"], calories: data["calories"], image: data["image"])
-    #  binding.pry
-       resp.write food.to_json
-    #  binding.pry
+    
+       resp.write(food.to_json)
       #  return [200, { 'Content-Type' => 'application/json' }, [ {:food => food}.to_json ]]   
-
+    elsif req.delete?
+      req.path.split("/foods/").last
+      Food.find(id).delete
+    else
+      resp.write "Path Not Found"
     end
-  
-
     resp.finish
   end
 
