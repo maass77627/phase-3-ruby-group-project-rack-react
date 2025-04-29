@@ -47,13 +47,28 @@
   width: 800px;
   background-color: chartreuse;
 }
+#bar{
+  /* position: absolute;
+  top: 5px;
+  right: 10px; */
+  /* float: right;  */
+}
+
+#pie {
+  position: absolute;
+  left: 5px;
+
+
+}
 
 #data{
+  display: flex;
+  column-gap: 200px;
   position: absolute;
-  left: 200px;
+  left: 50px;
   height: 700px;
-  width: 1400px;
-  background-color: coral;
+  width: 2000px;
+  background-color: rgb(90, 86, 85);
 }
 
 
