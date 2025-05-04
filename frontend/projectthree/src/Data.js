@@ -5,7 +5,8 @@ import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Legend } from 'recharts';
 
 
 
-function Data() {
+function Data({calTotal, veg, protein, dairy, fruit, grain, fat}) {
+  console.log(calTotal)
 
     const data = [
         {
@@ -54,17 +55,17 @@ function Data() {
     
 
     const data01 = [
-        { name: 'Vegetable', value: 400 },
-        { name: 'Fruit', value: 300 },
-        { name: 'Protein', value: 300 },
-        { name: 'Grain', value: 200 },
-        { name: 'Dairy', value: 278 },
-        { name: 'Fat', value: 189 },
+        { name: 'Vegetable', value: veg },
+        { name: 'Fruit', value: fruit },
+        { name: 'Protein', value: protein },
+        { name: 'Grain', value: grain },
+        { name: 'Dairy', value: dairy },
+        { name: 'Fat', value: fat },
       ];
       
       const data02 = [
-        { name: 'Group A', value: 2400 },
-        { name: 'Group B', value: 4567 },
+        { name: 'Group A', value: 2000 },
+        { name: 'Group B', value: calTotal },
         // { name: 'Group C', value: 1398 },
         // { name: 'Group D', value: 9800 },
         // { name: 'Group E', value: 3908 },
@@ -86,7 +87,7 @@ function Data() {
             fill="#8884d8"
             label
           />
-          <Pie dataKey="value" data={data02} cx={500} cy={200} innerRadius={40} outerRadius={80} fill="#82ca9d" />
+          <Pie dataKey="value" data={data02} cx={500} cy={200} innerRadius={40} outerRadius={80} fill="#d47b69" />
           <Tooltip />
         </PieChart>
         
