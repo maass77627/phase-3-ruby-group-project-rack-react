@@ -33,7 +33,7 @@ useEffect(()=> {
 const Home = () => (
   <div id="new">
      <FoodContainer dairy={dairy} grain={grain} fat={fat} setDairy={setDairy} setFat={setFat} setGrain={setGrain}  setVeg={setVeg} veg={veg} setProtein={setProtein} protein={protein} setFruit={setFruit} fruit={fruit} calTotal={calTotal} setCalTotal={setCalTotal} setDailyfood={setDailyfood} dailyfood={dailyfood} foods={foods} setFoods={setFoods}></FoodContainer>
-     <DailyIntake setDailyfood={setDailyfood} dailyfood={dailyfood}></DailyIntake>
+     <DailyIntake setCalTotal={setCalTotal} calTotal={calTotal} veg={veg} setVeg={setVeg} fruit={fruit} setFruit={setFruit} grain={grain} setGrain={setGrain} protein={protein} setProtein={setProtein} fat={fat} setFat={setFat} dairy={dairy} setDairy={setDairy} setDailyfood={setDailyfood} dailyfood={dailyfood}></DailyIntake>
   </div>
 );
 

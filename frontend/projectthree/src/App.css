@@ -4,7 +4,9 @@
 }
 
 #links {
-  margin: auto;
+  /* position: absolute; */
+
+  /* margin: auto; */
   padding: 30px;
 }
 
@@ -48,26 +50,32 @@
   background-color: chartreuse;
 }
 #bar{
-  /* position: absolute;
-  top: 5px;
-  right: 10px; */
+   position: absolute;
+  top: 100px;
+  right: 10px; 
   /* float: right;  */
 }
 
 #label1 {
   position: absolute;
-  left: 400px;
+  left: 450px;
 }
 
 #label2 {
   position: absolute;
   top: 100px;
-  left: 50px;
+  left: 100px;
+}
+
+#label3 {
+  position: absolute;
+  top: 50px;
+  left: 1100px;
 }
 
 #pie {
   position: absolute;
-  left: 5px;
+  left: 55px;
 
 
 }
@@ -76,7 +84,7 @@
   display: flex;
   column-gap: 200px;
   position: absolute;
-  left: 0px;
+  left: 50px;
   height: 700px;
   width: 2000px;
   background-color: rgb(90, 86, 85);
@@ -86,7 +94,7 @@
 #newform {
   /* position: fixed; */
   background-color: blueviolet;
-  left: 100px;
+  left: 10px;
   height: 300px;
   width: 2000px;
 }

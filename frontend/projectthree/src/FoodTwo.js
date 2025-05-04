@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 
-function FoodTwo({food, setDailyfood, dailyfood}) {
+function FoodTwo({calTotal, setCalTotal, food, setDailyfood, dailyfood, fat, setFat, protein, setProtein, dairy, setDairy, fruit, setFruit, veg, setVeg, grain, setGrain}) {
 
    const [toggle, setToggle] = useState(false)
     
@@ -13,6 +13,37 @@ function handleDelete(e) {
  let newfood = dailyfood.filter((foody) => foody.id !== food.id)
  setDailyfood(newfood)
  console.log(newfood)
+setCalTotal(calTotal - food.calories)
+
+ switch(food.category) {
+    case 'vegetable':
+        setVeg(veg - 10)
+     console.log(veg);
+     break
+     case 'fruit':
+        setFruit(fruit - 10)
+        console.log(fruit);
+        break
+        case 'protein':
+            setProtein(protein - 10)
+            console.log(protein);
+            break
+            case 'dairy':
+        setDairy(dairy - 10)
+        console.log(dairy);
+        break
+        case 'grain':
+            setGrain(grain - 10)
+            console.log(grain);
+            break
+            case 'fat':
+            setFat(fat - 10)
+            console.log(fat);
+            break
+    default:
+      return 'foo';
+    //   break
+  }
     
 }
 
