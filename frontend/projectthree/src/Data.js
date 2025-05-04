@@ -75,6 +75,8 @@ function Data({calTotal, veg, protein, dairy, fruit, grain, fat}) {
    
     return(
         <div id="data">
+          <h1 id="label1">Calories Consumed</h1>
+          <h1 id="label2">Food Groups Consumed</h1>
              <PieChart id="pie" width={600} height={600}>
           <Pie
           
@@ -87,6 +89,7 @@ function Data({calTotal, veg, protein, dairy, fruit, grain, fat}) {
             fill="#8884d8"
             label
           />
+          
           <Pie dataKey="value" data={data02} cx={500} cy={200} innerRadius={40} outerRadius={80} fill="#d47b69" />
           <Tooltip />
         </PieChart>
