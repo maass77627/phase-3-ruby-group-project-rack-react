@@ -5,7 +5,6 @@ function FoodFilter({ foods, setFoods}) {
 const [foodinput, setFoodInput] = useState("")
 
     function handleChange(e) {
-        console.log(e.target.value)
         setFoodInput(e.target.value)
         console.log(foodinput)
     }

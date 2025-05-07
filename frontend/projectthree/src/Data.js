@@ -64,12 +64,9 @@ function Data({calTotal, veg, protein, dairy, fruit, grain, fat}) {
       ];
       
       const data02 = [
-        { name: 'Group A', value: 2000 },
-        { name: 'Group B', value: calTotal },
-        // { name: 'Group C', value: 1398 },
-        // { name: 'Group D', value: 9800 },
-        // { name: 'Group E', value: 3908 },
-        // { name: 'Group F', value: 4800 },
+        { name: 'Total Calories', value: 2000 },
+        { name: 'Calories Used', value: calTotal },
+        
       ];
 
    
@@ -91,7 +88,7 @@ function Data({calTotal, veg, protein, dairy, fruit, grain, fat}) {
             label
           />
           
-          <Pie dataKey="value" data={data02} cx={500} cy={200} innerRadius={40} outerRadius={80} fill="#d47b69" />
+          <Pie dataKey="value" data={data02} cx={500} cy={200} innerRadius={40}  outerRadius={80} fill="#d47b69" />
           <Tooltip />
         </PieChart>
         
